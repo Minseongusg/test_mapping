@@ -9,7 +9,10 @@ Installation Instructions - Ubuntu 16.04 with ROS Kinetic
  $ cd ~/catkin_ws/src
  $ catkin_init_workspace  # initialize your catkin workspace
  $ wstool init
+ -- original version
  $ wget https://raw.githubusercontent.com/mkpark2017/flight_space_mapping/master/flight_space_mapping.rosinstall
+ -- customized version
+ $ wget https://raw.githubusercontent.com/Minseongusg/flight_space_mapping/mapping_march/flight_space_mapping.rosinstall 
  $ wstool merge flight_space_mapping.rosinstall
  $ wstool update
  ```
