@@ -1,4 +1,4 @@
-- git: {local-name: flight_space_mapping, uri: 'https://github.com/mkpark2017/flight_space_mapping.git'}
+- git: {local-name: flight_space_mapping, uri: 'https://github.com/Minseongusg/flight_space_mapping.git'}
 - git: {local-name: wind_visualization, uri: 'https://github.com/mkpark2017/wind_visualization'}
 - git: {local-name: octomap_mapping, uri: 'https://github.com/octomap/octomap_mapping', version: 'kinetic-devel'}
 - git: {local-name: mav_comm, uri: 'https://github.com/ethz-asl/mav_comm.git'}
