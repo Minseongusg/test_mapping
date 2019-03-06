@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
 <launch>
-<<<<<<< HEAD
 <!--
   <node pkg="wind_visualization" name="wind_visual" type="wind_visual_node">
     <remap from="/firefly/ground_truth/pose" to="/robot0/ground_truth/pose" />
     <remap from="/wind_data" to="/robot0/wind_data" />
   </node>
 -->
-  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server" output="screen">
+  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_1" output="screen">
     <param name="resolution" value="0.3" />
-
+  </node>
     <!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
     <param name="frame_id" type="string" value="world" />
     <!-- param name="frame_id" type="string" value="/robot0/base_link" / -->
@@ -23,7 +22,7 @@
 	
   </node>
   <!-- map abstraction -->
-  <node pkg="flight_space_mapping" name="euclidean_cluster" type="euclidean_cluster">
+  <node pkg="flight_space_mapping" name="euclidean_cluster_1" type="euclidean_cluster">
       <rosparam param="map_frame_id" subst_value="True">world</rosparam>
       <rosparam param="ransac_distance_threashold" subst_value="True">0.3</rosparam>
       <rosparam param="kd_min_size" subst_value="True">100</rosparam>
@@ -31,16 +30,15 @@
       <rosparam param="kd_tolerance" subst_value="True">0.8</rosparam>
   </node>
   
-  <node pkg="flight_space_mapping" name="abstract_map" type="abstract_map" />
+  <node pkg="flight_space_mapping" name="abstract_map_1" type="abstract_map" />
 
   <!-- ugv 2d map -->
-  <node pkg="flight_space_mapping" type="ugv_objects_map" name="ugv_objects_map" />
+  <node pkg="flight_space_mapping" type="ugv_objects_map" name="ugv_objects_map_1" />
 
   <!-- trajectory -->
-  <node pkg="hector_trajectory_server" name="trajectory" type="hector_trajectory_server">
+  <node pkg="hector_trajectory_server" name="trajectory_1" type="hector_trajectory_server">
     <param name="target_frame_name" value="world" />
     <param name="source_frame_name" value="robot0/base_link" />
-=======
 
   <arg name="mav_name" default="firefly"/>
   <arg name="enable_logging" default="false" />
@@ -91,7 +89,7 @@
     <remap from="/wind_data" to="/firefly1/wind_data" />
   </node>
 
-  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_2">
     <param name="resolution" value="0.1" />
 
     <!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
@@ -109,12 +107,11 @@
 
   <include file="$(find flight_space_mapping)/launch/abstract_map.launch" />
 
-  <node pkg="flight_space_mapping" type="ugv_objects_map" name="ugv_objects_map" />
+  <node pkg="flight_space_mapping" type="ugv_objects_map" name="ugv_objects_map_2" />
 
-  <node pkg="hector_trajectory_server" name="trajectory" type="hector_trajectory_server">
+  <node pkg="hector_trajectory_server" name="trajectory_2" type="hector_trajectory_server">
     <param name="target_frame_name" value="world" />
     <param name="source_frame_name" value="firefly1/base_link" />
->>>>>>> 960db8d797dc8729403e825590207663137980fd
   </node>
 
 
