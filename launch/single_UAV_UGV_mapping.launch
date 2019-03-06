@@ -8,7 +8,6 @@
 -->
   <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_1" output="screen">
     <param name="resolution" value="0.3" />
-  </node>
     <!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
     <param name="frame_id" type="string" value="world" />
     <!-- param name="frame_id" type="string" value="/robot0/base_link" / -->
@@ -39,7 +38,8 @@
   <node pkg="hector_trajectory_server" name="trajectory_1" type="hector_trajectory_server">
     <param name="target_frame_name" value="world" />
     <param name="source_frame_name" value="robot0/base_link" />
-
+  </node>
+	
   <arg name="mav_name" default="firefly"/>
   <arg name="enable_logging" default="false" />
   <arg name="enable_ground_truth" default="true" />
