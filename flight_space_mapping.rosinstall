@@ -1,8 +1,9 @@
 - git: {local-name: flight_space_mapping, uri: 'https://github.com/Minseongusg/flight_space_mapping.git'}
-- git: {local-name: octomap_mapping, uri: 'https://github.com/octomap/octomap_mapping', version: 'kinetic-devel'}
-- git: {local-name: mav_comm, uri: 'https://github.com/ethz-asl/mav_comm.git'}
-- git: {local-name: mavlink, uri: 'https://github.com/mavlink/mavlink-gbp-release.git', version: 'upstream'}
-- git: {local-name: mavros, uri: 'https://github.com/ethz-asl/mavros.git'}
-- git: {local-name: rotors_simulator, uri: 'https://github.com/mkpark2017/rotors_simulator.git', version: 'kinetic/3D_LiDAR'}
-- git: {local-name: velodyne_simulator, uri: 'https://github.com/mkpark2017/Velodyne_simulator.git'}
-- git: {local-name: husky, uri: 'http://github.com/mkpark2017/husky.git', version: 'pre_tf_added'}
+- git: {local-name: octomap, uri: 'https://github.com/Minseongusg/octomap_mapping.git', version: 'mapping'}
+- git: {local-name: mav_comm, uri: 'https://github.com/mkpark2017/mav_comm.git'}
+- git: {local-name: mavlink, uri: 'https://github.com/mkpark2017/mavlink-gbp-release.git', version: 'upstream'}
+- git: {local-name: mavros, uri: 'https://github.com/mkpark2017/mavros.git'}
+- git: {local-name: rotors_simulator, uri: 'https://github.com/Minseongusg/rotors_simulator.git', version: 'mapping'}
+- git: {local-name: velodyne, uri: 'https://github.com/Minseongusg/velodyne_simulator.git', version: 'mapping'}
+- git: {local-name: husky, uri: 'https://github.com/Minseongusg/husky.git', version: 'mapping'}
+- git: {local-name: wind_visualization, uri: 'https://github.com/Minseongusg/wind_visualization', version: 'mapping'}
